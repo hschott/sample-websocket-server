@@ -12,7 +12,6 @@
     <artifactId>sample-websocket-server</artifactId>
     <name>WebSocket Sample</name>
     <version>1.0.0</version>
-    <packaging>war</packaging>
 
     <properties>
         <main.basedir>${basedir}/../..</main.basedir>
@@ -49,16 +48,4 @@
         </plugins>
     </build>
 
-    <profiles>
-	    <profile>
-	         <!-- When built in OpenShift the 'openshift' profile will be used when invoking mvn. -->
-	         <!-- Use this profile for any OpenShift specific customization your app will need. -->
-	         <!-- By default that is to put the resulting archive into the 'deployments' folder. -->
-	         <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
-	         <id>openshift</id>
-	         <build>
-	   			<finalName>ROOT</finalName>
-	         </build>
-	      </profile>
-	</profiles>
 </project>
