@@ -16,11 +16,7 @@ All services are SockJS enabled.
 Establish native rfc 6455 websocket connection by suffixing above URIs with /websocket .
 
 
-Instant Testing within RHEL OpenShift Online
---------------------------------------------
+Instant Testing within Heroku App
+---------------------------------
 
-This sample is ready to use at http://websocket-hschott.rhcloud.com.
-
-Important! You have to use port 8000 to connect to native rfc 6455 websocket.
-eg. ws://websocket-hschott.rhcloud.com:8000/hello/websocket
-
+This sample is ready to use at https://sample-websocket-server.herokuapp.com
