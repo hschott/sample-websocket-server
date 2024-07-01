@@ -14,9 +14,3 @@ Provides four websocket endpoints:
 
 All services are SockJS enabled.
 Establish native rfc 6455 websocket connection by suffixing above URIs with /websocket .
-
-
-Instant Testing within Heroku App
----------------------------------
-
-This sample is ready to use at https://sample-websocket-server.herokuapp.com

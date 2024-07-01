@@ -19,7 +19,7 @@ package samples.websocket.config;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.WebSocketHandler;
@@ -82,10 +82,10 @@ public class SampleWebSocketsApplication extends SpringBootServletInitializer im
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(echoWebSocketHandler(), "/echo").setAllowedOrigins("*").withSockJS();
-        registry.addHandler(greetingWebSocketHandler(), "/hello").setAllowedOrigins("*").withSockJS();
-        registry.addHandler(closeWithCodeWebSocketHandler(), "/code").setAllowedOrigins("*").withSockJS();
-        registry.addHandler(randomByteStreamWebSocketHandler(), "/stream").setAllowedOrigins("*").withSockJS();
+        registry.addHandler(echoWebSocketHandler(), "/echo").setAllowedOriginPatterns("*").withSockJS();
+        registry.addHandler(greetingWebSocketHandler(), "/hello").setAllowedOriginPatterns("*").withSockJS();
+        registry.addHandler(closeWithCodeWebSocketHandler(), "/code").setAllowedOriginPatterns("*").withSockJS();
+        registry.addHandler(randomByteStreamWebSocketHandler(), "/stream").setAllowedOriginPatterns("*").withSockJS();
     }
 
 }
